@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenGear - Premium Cannabis Accessories</title>
+    <meta name="description" content="Premium cannabis accessories store featuring bongs, grinders, and more. Explore our strain gallery and cannabis museum.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span data-key="brand">onlygod</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-key="nav-home">Home</a>
+                <a href="#gear" class="nav-link" data-key="nav-gear">Gear</a>
+                <a href="#strains" class="nav-link" data-key="nav-strains">Strain Menu</a>
+                <a href="#museum" class="nav-link" data-key="nav-museum">Museum</a>
+                <a href="#contact" class="nav-link" data-key="nav-contact">Contact</a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="lang-toggle" id="lang-toggle" data-key="lang-toggle">TH</button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-key="hero-title">Premium Cannabis Accessories</h1>
+                <p class="hero-subtitle" data-key="hero-subtitle">Discover our curated collection of high-quality bongs, grinders, and smoking accessories</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('gear')" data-key="hero-shop">Shop Now</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('strains')" data-key="hero-explore">Explore Strains</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-icon"><i class="fas fa-seedling"></i></div>
+                    <div class="floating-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="floating-icon"><i class="fas fa-cannabis"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gear Section -->
+    <section id="gear" class="gear-section">
+        <div class="container">
+            <h2 class="section-title" data-key="gear-title">Premium Accessories</h2>
+            <p class="section-subtitle" data-key="gear-subtitle">Handpicked collection of the finest smoking accessories</p>
+            
+            <div class="gear-grid">
+                <!-- Bongs -->
+                <div class="gear-item">
+                    <div class="gear-image">
+                        <img src="https://pixabay.com/get/g3f9e09611c7dcfe80093a2741293e353273685aff3f4882b1e3922f7bb8c76c026dba69e9addd0d2e02d9e51f52965e3de76167ea369824a360e7e05f197f475_1280.jpg" alt="Glass Bong" loading="lazy">
+                        <div class="gear-overlay">
+                            <button class="btn btn-view" data-key="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gear-info">
+                        <h3 data-key="product-glass-bong">Premium Glass Bong</h3>
+                        <p data-key="product-glass-bong-desc">High-quality borosilicate glass with smooth functionality</p>
+                        <div class="price">฿2,500</div>
+                    </div>
+                </div>
+
+                <div class="gear-item">
+                    <div class="gear-image">
+                        <img src="https://pixabay.com/get/gb48bb84bdf4d761ff251962b47588f250a2a00f8177c41e9a72d80d2efaed23a1015ebb6ddbb1f51189296260f18e3937691bbe0e44d7d8f30cbc09295909473_1280.jpg" alt="Artistic Bong" loading="lazy">
+                        <div class="gear-overlay">
+                            <button class="btn btn-view" data-key="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gear-info">
+                        <h3 data-key="product-artistic-bong">Artistic Water Pipe</h3>
+                        <p data-key="product-artistic-bong-desc">Handcrafted artistic design with superior filtration</p>
+                        <div class="price">฿3,200</div>
+                    </div>
+                </div>
+
+                <div class="gear-item">
+                    <div class="gear-image">
+                        <img src="https://pixabay.com/get/gefe94a8c625498d1a925511f776f59228beb0f9834e9b470dc252d43d4fe4b2f0ce6e2ba67f251a66ac8835861e75fe97a6a003f9782c47b7f65871a72c6f8dd_1280.jpg" alt="Designer Bong" loading="lazy">
+                        <div class="gear-overlay">
+                            <button class="btn btn-view" data-key="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gear-info">
+                        <h3 data-key="product-designer-bong">Designer Collection</h3>
+                        <p data-key="product-designer-bong-desc">Limited edition designer piece with unique aesthetics</p>
+                        <div class="price">฿4,800</div>
+                    </div>
+                </div>
+
+                <!-- Grinders -->
+                <div class="gear-item">
+                    <div class="gear-image">
+                        <img src="https://pixabay.com/get/g048e74ec9ed805cb8f1b1546aa5acc8eef7f349c5bc2218e05d0a40635a1b4ed503c15235e3503359cc45e3afde82b0274adafc3aa94fc4d6fd343a4cdc63665_1280.jpg" alt="Metal Grinder" loading="lazy">
+                        <div class="gear-overlay">
+                            <button class="btn btn-view" data-key="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gear-info">
+                        <h3 data-key="product-metal-grinder">Precision Metal Grinder</h3>
+                        <p data-key="product-metal-grinder-desc">4-piece aluminum grinder with diamond teeth</p>
+                        <div class="price">฿890</div>
+                    </div>
+                </div>
+
+                <div class="gear-item">
+                    <div class="gear-image">
+                        <img src="https://pixabay.com/get/ge2037b5e1fcc953592aed478cdb274cf8f8777a90c75cc4df4b86d0d390e628b7bd5e4bdbe70f05dfbdbb01755deb6d5ace68aaadd75547e074ec6e063cbdb04_1280.jpg" alt="Rolling Papers" loading="lazy">
+                        <div class="gear-overlay">
+                            <button class="btn btn-view" data-key="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gear-info">
+                        <h3 data-key="product-rolling-papers">Premium Rolling Papers</h3>
+                        <p data-key="product-rolling-papers-desc">Ultra-thin, slow-burning papers for the perfect roll</p>
+                        <div class="price">฿120</div>
+                    </div>
+                </div>
+
+                <div class="gear-item">
+                    <div class="gear-image">
+                        <img src="https://pixabay.com/get/g9172d118e7fd1b390889a9168b9f16fe59cb92cbaf6cc380cd10dcfcdd37d3ff72a9a8158136e48aafac31260b586a676678e44b10a6a6ff8268cb6d17acf32d_1280.jpg" alt="Rolling Tray" loading="lazy">
+                        <div class="gear-overlay">
+                            <button class="btn btn-view" data-key="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gear-info">
+                        <h3 data-key="product-rolling-tray">Bamboo Rolling Tray</h3>
+                        <p data-key="product-rolling-tray-desc">Eco-friendly bamboo tray with magnetic lid</p>
+                        <div class="price">฿650</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strain Menu Section -->
+    <section id="strains" class="strains-section">
+        <div class="container">
+            <h2 class="section-title" data-key="strains-title">Strain Gallery</h2>
+            <p class="section-subtitle" data-key="strains-subtitle">Explore our curated collection of premium cannabis strains</p>
+            
+            <div class="strains-grid">
+                <div class="strain-card">
+                    <div class="strain-image-container">
+                        <img src="https://pixabay.com/get/geaf3576d6bacc55c0abda1bc8e31ae51dd71711235015e3d76c4cdd89076a8145773c6c43a13fca5cdb55ff8cd650aca8c73b454d791c92d14f85e247a2d5090_1280.jpg" alt="Purple Haze" class="strain-image" loading="lazy">
+                        <div class="strain-overlay">
+                            <div class="strain-effects">
+                                <span class="effect-tag">Euphoric</span>
+                                <span class="effect-tag">Creative</span>
+                                <span class="effect-tag">Uplifting</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strain-info">
+                        <h3 data-key="strain-purple-haze">Purple Haze</h3>
+                        <p class="strain-type" data-key="strain-sativa">Sativa Dominant</p>
+                        <p class="strain-description" data-key="strain-purple-haze-desc">A legendary strain known for its vibrant colors and uplifting effects</p>
+                    </div>
+                </div>
+
+                <div class="strain-card">
+                    <div class="strain-image-container">
+                        <img src="https://pixabay.com/get/g5532374b1a56d4c17e1c871e9c91aad69d0fe8ce2913a73d6786e5cf34067ea3d9444e9e3857e3f0d5dd8a5771d7d6c04f21c6e6fc0e69dd83df5c00c74f48ad_1280.jpg" alt="OG Kush" class="strain-image" loading="lazy">
+                        <div class="strain-overlay">
+                            <div class="strain-effects">
+                                <span class="effect-tag">Relaxing</span>
+                                <span class="effect-tag">Happy</span>
+                                <span class="effect-tag">Sleepy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strain-info">
+                        <h3 data-key="strain-og-kush">OG Kush</h3>
+                        <p class="strain-type" data-key="strain-hybrid">Hybrid</p>
+                        <p class="strain-description" data-key="strain-og-kush-desc">Classic strain with earthy pine and sour lemon scent</p>
+                    </div>
+                </div>
+
+                <div class="strain-card">
+                    <div class="strain-image-container">
+                        <img src="https://pixabay.com/get/gade71737aace852a8ad70a8ea33386d42cd6ae8a4e2c85693826cf8e81ffb153056e7ffca94840287c9779f5966e0b2c758833059275417e076687d0411809e5_1280.jpg" alt="Blue Dream" class="strain-image" loading="lazy">
+                        <div class="strain-overlay">
+                            <div class="strain-effects">
+                                <span class="effect-tag">Balanced</span>
+                                <span class="effect-tag">Focused</span>
+                                <span class="effect-tag">Calm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strain-info">
+                        <h3 data-key="strain-blue-dream">Blue Dream</h3>
+                        <p class="strain-type" data-key="strain-hybrid">Hybrid</p>
+                        <p class="strain-description" data-key="strain-blue-dream-desc">Perfect balance of relaxation and gentle euphoria</p>
+                    </div>
+                </div>
+
+                <div class="strain-card">
+                    <div class="strain-image-container">
+                        <img src="https://pixabay.com/get/g1c6991d9ac8542d810c3b1242f16013ea14f09c4c588c16fffec155943e9bf1a4711ab20924129d7bee9e0c9c0a96c3b0bcc1806fc05de1188570a4d4476b024_1280.jpg" alt="White Widow" class="strain-image" loading="lazy">
+                        <div class="strain-overlay">
+                            <div class="strain-effects">
+                                <span class="effect-tag">Energetic</span>
+                                <span class="effect-tag">Social</span>
+                                <span class="effect-tag">Clear</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strain-info">
+                        <h3 data-key="strain-white-widow">White Widow</h3>
+                        <p class="strain-type" data-key="strain-hybrid">Hybrid</p>
+                        <p class="strain-description" data-key="strain-white-widow-desc">Resin-covered buds with powerful energizing effects</p>
+                    </div>
+                </div>
+
+                <div class="strain-card">
+                    <div class="strain-image-container">
+                        <img src="https://pixabay.com/get/g8249351342ce63c77d3311852090200beb927993152b98ba10bbaf4e9294ce35ae08f9c184ab2d4f58d3bddbffd5ce6dc5a3e4b75119959187c1204bfd628628_1280.jpg" alt="Granddaddy Purple" class="strain-image" loading="lazy">
+                        <div class="strain-overlay">
+                            <div class="strain-effects">
+                                <span class="effect-tag">Relaxing</span>
+                                <span class="effect-tag">Dreamy</span>
+                                <span class="effect-tag">Peaceful</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strain-info">
+                        <h3 data-key="strain-granddaddy-purple">Granddaddy Purple</h3>
+                        <p class="strain-type" data-key="strain-indica">Indica</p>
+                        <p class="strain-description" data-key="strain-granddaddy-purple-desc">Deep relaxation with sweet grape and berry flavors</p>
+                    </div>
+                </div>
+
+                <div class="strain-card">
+                    <div class="strain-image-container">
+                        <img src="https://pixabay.com/get/g8d349bd4505ee438550fd1d6fd9687069e4c10e72f3bcb785676113a5c031e5e0a584e2477628aa002e7d124ac5926596cb3578ef9b09b121fbccab7975edf28_1280.jpg" alt="Green Crack" class="strain-image" loading="lazy">
+                        <div class="strain-overlay">
+                            <div class="strain-effects">
+                                <span class="effect-tag">Energetic</span>
+                                <span class="effect-tag">Focus</span>
+                                <span class="effect-tag">Motivated</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strain-info">
+                        <h3 data-key="strain-green-crack">Green Crack</h3>
+                        <p class="strain-type" data-key="strain-sativa">Sativa</p>
+                        <p class="strain-description" data-key="strain-green-crack-desc">Invigorating mental buzz with fruity flavor profile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Museum Section -->
+    <section id="museum" class="museum-section">
+        <div class="container">
+            <h2 class="section-title" data-key="museum-title">Cannabis Museum</h2>
+            <p class="section-subtitle" data-key="museum-subtitle">Explore the intricate beauty of cannabis through microscopic art</p>
+            
+            <div class="museum-grid">
+                <div class="museum-item" data-zoom="https://pixabay.com/get/geeaa8dc2f6614167cffc71d90f9fce0f9d9d223612889c77be9a8e9204a32b2080270150dc2fe8fe3f1499631c343e7bb00e0778ade94bf1fab4b3cf50d4adf0_1280.jpg">
+                    <img src="https://pixabay.com/get/geeaa8dc2f6614167cffc71d90f9fce0f9d9d223612889c77be9a8e9204a32b2080270150dc2fe8fe3f1499631c343e7bb00e0778ade94bf1fab4b3cf50d4adf0_1280.jpg" alt="Trichomes Close-up" loading="lazy">
+                    <div class="museum-overlay">
+                        <h3 data-key="museum-trichomes">Crystal Trichomes</h3>
+                        <p data-key="museum-trichomes-desc">Microscopic view of resinous trichomes</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="museum-item" data-zoom="https://pixabay.com/get/gc38b0364657ba3d020717e226bd9627aa136093ffe81be59ddc50f5e29c62ddb2f8337f0b48c1fb1019b98254a613f4a8bb1c8c85558c8decd61e7e3f8bd89ec_1280.jpg">
+                    <img src="https://pixabay.com/get/gc38b0364657ba3d020717e226bd9627aa136093ffe81be59ddc50f5e29c62ddb2f8337f0b48c1fb1019b98254a613f4a8bb1c8c85558c8decd61e7e3f8bd89ec_1280.jpg" alt="Purple Trichomes" loading="lazy">
+                    <div class="museum-overlay">
+                        <h3 data-key="museum-purple-crystals">Purple Crystals</h3>
+                        <p data-key="museum-purple-crystals-desc">Vibrant purple trichome formations</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="museum-item" data-zoom="https://pixabay.com/get/g6468c296dccb9862c3cd02d8ed5fad376886062a5901e781b8ab020cd88cdc6d17aee20cd5f75e9aec741b82b4fcc46de7ab483eb071f912097746318012a75d_1280.jpg">
+                    <img src="https://pixabay.com/get/g6468c296dccb9862c3cd02d8ed5fad376886062a5901e781b8ab020cd88cdc6d17aee20cd5f75e9aec741b82b4fcc46de7ab483eb071f912097746318012a75d_1280.jpg" alt="Frosty Trichomes" loading="lazy">
+                    <div class="museum-overlay">
+                        <h3 data-key="museum-frosty-coating">Frosty Coating</h3>
+                        <p data-key="museum-frosty-coating-desc">Dense trichome coverage like winter frost</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="museum-item" data-zoom="https://pixabay.com/get/g724063541cd3b92c478a76ae5903175452888766a12ecb109c4afb73c6204e3ef7fcb1736ad322ac6a50bb7955ad3a507f218c797cb7fdcbb1d9726dcb00592b_1280.jpg">
+                    <img src="https://pixabay.com/get/g724063541cd3b92c478a76ae5903175452888766a12ecb109c4afb73c6204e3ef7fcb1736ad322ac6a50bb7955ad3a507f218c797cb7fdcbb1d9726dcb00592b_1280.jpg" alt="Amber Trichomes" loading="lazy">
+                    <div class="museum-overlay">
+                        <h3 data-key="museum-amber-glands">Amber Glands</h3>
+                        <p data-key="museum-amber-glands-desc">Mature amber-colored trichome heads</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="museum-item" data-zoom="https://pixabay.com/get/ga884106a31cde4823376bd398f7d347147722e6c2bfa8fe4f53b3412a4c8b5865a88db18310862cbdf03b24e0fbd44bf0e49cf1e353e0809202f0fbdc40731e3_1280.jpg">
+                    <img src="https://pixabay.com/get/ga884106a31cde4823376bd398f7d347147722e6c2bfa8fe4f53b3412a4c8b5865a88db18310862cbdf03b24e0fbd44bf0e49cf1e353e0809202f0fbdc40731e3_1280.jpg" alt="Resin Droplets" loading="lazy">
+                    <div class="museum-overlay">
+                        <h3 data-key="museum-resin-droplets">Resin Droplets</h3>
+                        <p data-key="museum-resin-droplets-desc">Glistening resin droplets on leaves</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <div class="museum-item" data-zoom="https://pixabay.com/get/gf1273d79807e678ab120d161ab2e22af2161ad14d0a1eb00e30956b0d33f32a99c4f8ed886055f097d6c791848a4263715b8497824a4db6fc1c148564f8479dc_1280.jpg">
+                    <img src="https://pixabay.com/get/gf1273d79807e678ab120d161ab2e22af2161ad14d0a1eb00e30956b0d33f32a99c4f8ed886055f097d6c791848a4263715b8497824a4db6fc1c148564f8479dc_1280.jpg" alt="Crystal Structures" loading="lazy">
+                    <div class="museum-overlay">
+                        <h3 data-key="museum-crystal-structures">Crystal Structures</h3>
+                        <p data-key="museum-crystal-structures-desc">Intricate crystalline formations</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-key="contact-title">Get In Touch</h2>
+            <p class="section-subtitle" data-key="contact-subtitle">Visit our store or reach out to us online</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3 data-key="contact-location-title">Store Location</h3>
+                            <p data-key="contact-location">123 Cannabis Street, Bangkok, Thailand 10110</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3 data-key="contact-phone-title">Phone</h3>
+                            <p>+66 2 123 4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 data-key="contact-email-title">Email</h3>
+                            <p>info@greengear.th</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3 data-key="contact-hours-title">Store Hours</h3>
+                            <p data-key="contact-hours">Mon-Sun: 10:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="line-contact">
+                        <button class="btn btn-line" id="line-contact">
+                            <i class="fab fa-line"></i>
+                            <span data-key="contact-line">Contact via LINE</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" data-key="form-name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" data-key="form-email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" data-key="form-message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" data-key="form-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span data-key="brand">onlygod</span>
+                </div>
+                <p data-key="footer-text">Premium cannabis accessories for the discerning enthusiast</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 onlygod. <span data-key="footer-rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Zoom Modal -->
+    <div class="zoom-modal" id="zoom-modal">
+        <div class="zoom-content">
+            <button class="zoom-close" id="zoom-close">&times;</button>
+            <img id="zoom-image" src="" alt="Zoomed Image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
