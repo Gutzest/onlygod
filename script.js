@@ -157,19 +157,8 @@ const app = {
     isMenuOpen: false
 };
 
-// DOM elements
-const elements = {
-    navbar: document.getElementById('navbar'),
-    navMenu: document.getElementById('nav-menu'),
-    hamburger: document.getElementById('hamburger'),
-    themeToggle: document.getElementById('theme-toggle'),
-    langToggle: document.getElementById('lang-toggle'),
-    contactForm: document.getElementById('contact-form'),
-    lineContact: document.getElementById('line-contact'),
-    zoomModal: document.getElementById('zoom-modal'),
-    zoomImage: document.getElementById('zoom-image'),
-    zoomClose: document.getElementById('zoom-close')
-};
+// DOM elements - initialized after DOM is ready
+let elements = {};
 
 // Initialize application
 document.addEventListener('DOMContentLoaded', () => {
@@ -184,6 +173,21 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function initializeApp() {
     console.log('Initializing GreenGear Cannabis Store...');
+    
+    // Initialize DOM elements
+    elements = {
+        navbar: document.getElementById('navbar'),
+        navMenu: document.getElementById('nav-menu'),
+        hamburger: document.getElementById('hamburger'),
+        themeToggle: document.getElementById('theme-toggle'),
+        langToggle: document.getElementById('lang-toggle'),
+        contactForm: document.getElementById('contact-form'),
+        lineContact: document.getElementById('line-contact'),
+        zoomModal: document.getElementById('zoom-modal'),
+        zoomImage: document.getElementById('zoom-image'),
+        zoomClose: document.getElementById('zoom-close')
+    };
+    
     updateLanguage();
     updateTheme();
     setupSmoothScrolling();
@@ -194,9 +198,9 @@ function initializeApp() {
  */
 function setupEventListeners() {
     // Navigation
-    elements.hamburger.addEventListener('click', toggleMobileMenu);
-    elements.themeToggle.addEventListener('click', toggleTheme);
-    elements.langToggle.addEventListener('click', toggleLanguage);
+    if (elements.hamburger) elements.hamburger.addEventListener('click', toggleMobileMenu);
+    if (elements.themeToggle) elements.themeToggle.addEventListener('click', toggleTheme);
+    if (elements.langToggle) elements.langToggle.addEventListener('click', toggleLanguage);
     
     // Navigation links
     document.querySelectorAll('.nav-link').forEach(link => {
@@ -204,10 +208,10 @@ function setupEventListeners() {
     });
     
     // Contact form
-    elements.contactForm.addEventListener('submit', handleContactSubmit);
+    if (elements.contactForm) elements.contactForm.addEventListener('submit', handleContactSubmit);
     
     // LINE contact
-    elements.lineContact.addEventListener('click', handleLineContact);
+    if (elements.lineContact) elements.lineContact.addEventListener('click', handleLineContact);
     
     // Museum zoom functionality
     document.querySelectorAll('.museum-item').forEach(item => {
@@ -215,8 +219,8 @@ function setupEventListeners() {
     });
     
     // Zoom modal
-    elements.zoomModal.addEventListener('click', closeZoomModal);
-    elements.zoomClose.addEventListener('click', closeZoomModal);
+    if (elements.zoomModal) elements.zoomModal.addEventListener('click', closeZoomModal);
+    if (elements.zoomClose) elements.zoomClose.addEventListener('click', closeZoomModal);
     
     // Window events
     window.addEventListener('scroll', handleScroll);
@@ -314,8 +318,10 @@ function updateLanguage() {
     // Update HTML lang attribute
     document.documentElement.lang = app.currentLanguage;
     
-    // Update form placeholders
-    updateFormPlaceholders();
+    // Update form placeholders if form exists
+    if (document.getElementById('contact-form')) {
+        updateFormPlaceholders();
+    }
 }
 
 /**
@@ -336,30 +342,47 @@ function updateFormPlaceholders() {
     };
     
     const current = placeholders[app.currentLanguage];
-    document.getElementById('name').placeholder = current.name;
-    document.getElementById('email').placeholder = current.email;
-    document.getElementById('message').placeholder = current.message;
+    const nameField = document.getElementById('name');
+    const emailField = document.getElementById('email');
+    const messageField = document.getElementById('message');
+    
+    if (nameField) nameField.placeholder = current.name;
+    if (emailField) emailField.placeholder = current.email;
+    if (messageField) messageField.placeholder = current.message;
 }
 
 /**
  * Handle navigation link clicks
  */
 function handleNavigation(e) {
-    e.preventDefault();
+    // For external links (separate pages), let the browser handle normally
+    const href = e.target.getAttribute('href');
+    if (href && (href.endsWith('.html') || href.startsWith('http'))) {
+        // Close mobile menu if open
+        if (app.isMenuOpen) {
+            toggleMobileMenu();
+        }
+        return; // Let browser handle the navigation
+    }
     
-    // Update active nav link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-    });
-    e.target.classList.add('active');
-    
-    // Scroll to section
-    const targetId = e.target.getAttribute('href');
-    scrollToSection(targetId.substring(1));
-    
-    // Close mobile menu if open
-    if (app.isMenuOpen) {
-        toggleMobileMenu();
+    // For internal anchors (if any), handle with smooth scrolling
+    if (href && href.startsWith('#')) {
+        e.preventDefault();
+        
+        // Update active nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+        });
+        e.target.classList.add('active');
+        
+        // Scroll to section
+        const targetId = href.substring(1);
+        scrollToSection(targetId);
+        
+        // Close mobile menu if open
+        if (app.isMenuOpen) {
+            toggleMobileMenu();
+        }
     }
 }
 

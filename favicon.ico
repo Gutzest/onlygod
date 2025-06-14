@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <radialGradient id="leafGradient" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#48bb78;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d7d42;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <rect width="32" height="32" fill="#1a1a1a"/>
+  <!-- Cannabis leaf stylized -->
+  <g transform="translate(16,16)">
+    <!-- Center leaf -->
+    <ellipse cx="0" cy="-2" rx="2" ry="8" fill="url(#leafGradient)" transform="rotate(0)"/>
+    <!-- Side leaves -->
+    <ellipse cx="0" cy="-2" rx="1.5" ry="6" fill="url(#leafGradient)" transform="rotate(-30)"/>
+    <ellipse cx="0" cy="-2" rx="1.5" ry="6" fill="url(#leafGradient)" transform="rotate(30)"/>
+    <ellipse cx="0" cy="-2" rx="1" ry="4" fill="url(#leafGradient)" transform="rotate(-60)"/>
+    <ellipse cx="0" cy="-2" rx="1" ry="4" fill="url(#leafGradient)" transform="rotate(60)"/>
+    <!-- Stem -->
+    <rect x="-0.5" y="4" width="1" height="6" fill="#2d7d42" rx="0.5"/>
+  </g>
+</svg>
