@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenGear - Premium Cannabis Accessories</title>
-    <meta name="description" content="Premium cannabis accessories store featuring bongs, grinders, and more. Explore our strain gallery and cannabis museum.">
+    <title>onlygod - Premium Cannabis Accessories & Smoking Gear Store</title>
+    <meta name="description" content="Discover premium cannabis accessories at onlygod. Shop high-quality bongs, grinders, rolling papers & smoking gear. Explore our strain gallery and cannabis museum. Free shipping available.">
+    <meta name="keywords" content="cannabis accessories, bongs, grinders, smoking gear, rolling papers, glass pipes, premium cannabis, strain gallery, cannabis museum, smoking equipment">
+    <meta name="author" content="onlygod">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://onlygod.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="onlygod - Premium Cannabis Accessories & Smoking Gear">
+    <meta property="og:description" content="Discover premium cannabis accessories at onlygod. Shop high-quality bongs, grinders, rolling papers & smoking gear.">
+    <meta property="og:url" content="https://onlygod.com">
+    <meta property="og:site_name" content="onlygod">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="onlygod - Premium Cannabis Accessories">
+    <meta name="twitter:description" content="Discover premium cannabis accessories at onlygod. Shop high-quality bongs, grinders, and smoking gear.">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#48bb78">
+    <meta name="msapplication-TileColor" content="#48bb78">
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,90 +39,103 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span data-key="brand">onlygod</span>
-            </div>
-            
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active" data-key="nav-home">Home</a>
-                <a href="#gear" class="nav-link" data-key="nav-gear">Gear</a>
-                <a href="#strains" class="nav-link" data-key="nav-strains">Strain Menu</a>
-                <a href="#museum" class="nav-link" data-key="nav-museum">Museum</a>
-                <a href="#contact" class="nav-link" data-key="nav-contact">Contact</a>
-            </div>
-            
-            <div class="nav-controls">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="lang-toggle" id="lang-toggle" data-key="lang-toggle">TH</button>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    <header role="banner">
+        <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span data-key="brand">onlygod</span>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li role="none"><a href="#home" class="nav-link active" data-key="nav-home" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#gear" class="nav-link" data-key="nav-gear" role="menuitem">Gear</a></li>
+                    <li role="none"><a href="#strains" class="nav-link" data-key="nav-strains" role="menuitem">Strain Menu</a></li>
+                    <li role="none"><a href="#museum" class="nav-link" data-key="nav-museum" role="menuitem">Museum</a></li>
+                    <li role="none"><a href="#contact" class="nav-link" data-key="nav-contact" role="menuitem">Contact</a></li>
+                </ul>
+                
+                <div class="nav-controls">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle between light and dark theme" aria-pressed="false">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                    </button>
+                    <button class="lang-toggle" id="lang-toggle" data-key="lang-toggle" aria-label="Switch language">TH</button>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-key="hero-title">Premium Cannabis Accessories</h1>
-                <p class="hero-subtitle" data-key="hero-subtitle">Discover our curated collection of high-quality bongs, grinders, and smoking accessories</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection('gear')" data-key="hero-shop">Shop Now</button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('strains')" data-key="hero-explore">Explore Strains</button>
+    <main role="main">
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title" data-key="hero-title">Premium Cannabis Accessories</h1>
+                    <p class="hero-subtitle" data-key="hero-subtitle">Discover our curated collection of high-quality bongs, grinders, and smoking accessories</p>
+                    <nav class="hero-buttons" aria-label="Quick navigation">
+                        <button class="btn btn-primary" onclick="scrollToSection('gear')" data-key="hero-shop" aria-describedby="hero-title">Shop Now</button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('strains')" data-key="hero-explore" aria-describedby="hero-title">Explore Strains</button>
+                    </nav>
                 </div>
+                <aside class="hero-visual" aria-hidden="true">
+                    <div class="floating-elements">
+                        <div class="floating-icon"><i class="fas fa-seedling" aria-hidden="true"></i></div>
+                        <div class="floating-icon"><i class="fas fa-leaf" aria-hidden="true"></i></div>
+                        <div class="floating-icon"><i class="fas fa-cannabis" aria-hidden="true"></i></div>
+                    </div>
+                </aside>
             </div>
-            <div class="hero-visual">
-                <div class="floating-elements">
-                    <div class="floating-icon"><i class="fas fa-seedling"></i></div>
-                    <div class="floating-icon"><i class="fas fa-leaf"></i></div>
-                    <div class="floating-icon"><i class="fas fa-cannabis"></i></div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Gear Section -->
-    <section id="gear" class="gear-section">
-        <div class="container">
-            <h2 class="section-title" data-key="gear-title">Premium Accessories</h2>
-            <p class="section-subtitle" data-key="gear-subtitle">Handpicked collection of the finest smoking accessories</p>
+        <!-- Gear Section -->
+        <section id="gear" class="gear-section" aria-labelledby="gear-title">
+            <div class="container">
+                <header>
+                    <h2 id="gear-title" class="section-title" data-key="gear-title">Premium Accessories</h2>
+                    <p class="section-subtitle" data-key="gear-subtitle">Handpicked collection of the finest smoking accessories</p>
+                </header>
             
-            <div class="gear-grid">
+            <section class="gear-grid" aria-label="Product catalog">
                 <!-- Bongs -->
-                <div class="gear-item">
-                    <div class="gear-image">
-                        <img src="https://pixabay.com/get/g3f9e09611c7dcfe80093a2741293e353273685aff3f4882b1e3922f7bb8c76c026dba69e9addd0d2e02d9e51f52965e3de76167ea369824a360e7e05f197f475_1280.jpg" alt="Glass Bong" loading="lazy">
+                <article class="gear-item" itemscope itemtype="https://schema.org/Product" role="article">
+                    <figure class="gear-image">
+                        <img src="https://pixabay.com/get/g3f9e09611c7dcfe80093a2741293e353273685aff3f4882b1e3922f7bb8c76c026dba69e9addd0d2e02d9e51f52965e3de76167ea369824a360e7e05f197f475_1280.jpg" alt="Premium Glass Bong - High-quality borosilicate glass water pipe" loading="lazy" itemprop="image">
                         <div class="gear-overlay">
-                            <button class="btn btn-view" data-key="view-details">View Details</button>
+                            <button class="btn btn-view" data-key="view-details" aria-label="View details for Premium Glass Bong">View Details</button>
+                        </div>
+                    </figure>
+                    <div class="gear-info">
+                        <h3 data-key="product-glass-bong" itemprop="name">Premium Glass Bong</h3>
+                        <p data-key="product-glass-bong-desc" itemprop="description">High-quality borosilicate glass with smooth functionality</p>
+                        <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="availability" content="https://schema.org/InStock">
+                            <span itemprop="price" content="2500">฿2,500</span>
+                            <meta itemprop="priceCurrency" content="THB">
                         </div>
                     </div>
-                    <div class="gear-info">
-                        <h3 data-key="product-glass-bong">Premium Glass Bong</h3>
-                        <p data-key="product-glass-bong-desc">High-quality borosilicate glass with smooth functionality</p>
-                        <div class="price">฿2,500</div>
-                    </div>
-                </div>
+                </article>
 
-                <div class="gear-item">
-                    <div class="gear-image">
-                        <img src="https://pixabay.com/get/gb48bb84bdf4d761ff251962b47588f250a2a00f8177c41e9a72d80d2efaed23a1015ebb6ddbb1f51189296260f18e3937691bbe0e44d7d8f30cbc09295909473_1280.jpg" alt="Artistic Bong" loading="lazy">
+                <article class="gear-item" itemscope itemtype="https://schema.org/Product" role="article">
+                    <figure class="gear-image">
+                        <img src="https://pixabay.com/get/gb48bb84bdf4d761ff251962b47588f250a2a00f8177c41e9a72d80d2efaed23a1015ebb6ddbb1f51189296260f18e3937691bbe0e44d7d8f30cbc09295909473_1280.jpg" alt="Artistic Water Pipe - Handcrafted design with superior filtration" loading="lazy" itemprop="image">
                         <div class="gear-overlay">
-                            <button class="btn btn-view" data-key="view-details">View Details</button>
+                            <button class="btn btn-view" data-key="view-details" aria-label="View details for Artistic Water Pipe">View Details</button>
+                        </div>
+                    </figure>
+                    <div class="gear-info">
+                        <h3 data-key="product-artistic-bong" itemprop="name">Artistic Water Pipe</h3>
+                        <p data-key="product-artistic-bong-desc" itemprop="description">Handcrafted artistic design with superior filtration</p>
+                        <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="availability" content="https://schema.org/InStock">
+                            <span itemprop="price" content="3200">฿3,200</span>
+                            <meta itemprop="priceCurrency" content="THB">
                         </div>
                     </div>
-                    <div class="gear-info">
-                        <h3 data-key="product-artistic-bong">Artistic Water Pipe</h3>
-                        <p data-key="product-artistic-bong-desc">Handcrafted artistic design with superior filtration</p>
-                        <div class="price">฿3,200</div>
-                    </div>
-                </div>
+                </article>
 
                 <div class="gear-item">
                     <div class="gear-image">
@@ -157,34 +193,36 @@
                         <div class="price">฿650</div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
+        </section>
 
-    <!-- Strain Menu Section -->
-    <section id="strains" class="strains-section">
-        <div class="container">
-            <h2 class="section-title" data-key="strains-title">Strain Gallery</h2>
-            <p class="section-subtitle" data-key="strains-subtitle">Explore our curated collection of premium cannabis strains</p>
+        <!-- Strain Menu Section -->
+        <section id="strains" class="strains-section" aria-labelledby="strains-title">
+            <div class="container">
+                <header>
+                    <h2 id="strains-title" class="section-title" data-key="strains-title">Strain Gallery</h2>
+                    <p class="section-subtitle" data-key="strains-subtitle">Explore our curated collection of premium cannabis strains</p>
+                </header>
             
-            <div class="strains-grid">
-                <div class="strain-card">
-                    <div class="strain-image-container">
-                        <img src="https://pixabay.com/get/geaf3576d6bacc55c0abda1bc8e31ae51dd71711235015e3d76c4cdd89076a8145773c6c43a13fca5cdb55ff8cd650aca8c73b454d791c92d14f85e247a2d5090_1280.jpg" alt="Purple Haze" class="strain-image" loading="lazy">
-                        <div class="strain-overlay">
-                            <div class="strain-effects">
-                                <span class="effect-tag">Euphoric</span>
-                                <span class="effect-tag">Creative</span>
-                                <span class="effect-tag">Uplifting</span>
-                            </div>
-                        </div>
-                    </div>
+            <section class="strains-grid" aria-label="Cannabis strain collection">
+                <article class="strain-card" itemscope itemtype="https://schema.org/Product" role="article">
+                    <figure class="strain-image-container">
+                        <img src="https://pixabay.com/get/geaf3576d6bacc55c0abda1bc8e31ae51dd71711235015e3d76c4cdd89076a8145773c6c43a13fca5cdb55ff8cd650aca8c73b454d791c92d14f85e247a2d5090_1280.jpg" alt="Purple Haze cannabis strain - Sativa dominant with euphoric effects" class="strain-image" loading="lazy" itemprop="image">
+                        <figcaption class="strain-overlay">
+                            <ul class="strain-effects" aria-label="Strain effects">
+                                <li class="effect-tag">Euphoric</li>
+                                <li class="effect-tag">Creative</li>
+                                <li class="effect-tag">Uplifting</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
                     <div class="strain-info">
-                        <h3 data-key="strain-purple-haze">Purple Haze</h3>
-                        <p class="strain-type" data-key="strain-sativa">Sativa Dominant</p>
-                        <p class="strain-description" data-key="strain-purple-haze-desc">A legendary strain known for its vibrant colors and uplifting effects</p>
+                        <h3 data-key="strain-purple-haze" itemprop="name">Purple Haze</h3>
+                        <p class="strain-type" data-key="strain-sativa" itemprop="category">Sativa Dominant</p>
+                        <p class="strain-description" data-key="strain-purple-haze-desc" itemprop="description">A legendary strain known for its vibrant colors and uplifting effects</p>
                     </div>
-                </div>
+                </article>
 
                 <div class="strain-card">
                     <div class="strain-image-container">
@@ -282,8 +320,10 @@
     <!-- Museum Section -->
     <section id="museum" class="museum-section">
         <div class="container">
-            <h2 class="section-title" data-key="museum-title">Cannabis Museum</h2>
-            <p class="section-subtitle" data-key="museum-subtitle">Explore the intricate beauty of cannabis through microscopic art</p>
+            <header>
+                <h2 class="section-title" data-key="museum-title">Cannabis Museum</h2>
+                <p class="section-subtitle" data-key="museum-subtitle">Explore the intricate beauty of cannabis through microscopic art</p>
+            </header>
             
             <div class="museum-grid">
                 <div class="museum-item" data-zoom="https://pixabay.com/get/geeaa8dc2f6614167cffc71d90f9fce0f9d9d223612889c77be9a8e9204a32b2080270150dc2fe8fe3f1499631c343e7bb00e0778ade94bf1fab4b3cf50d4adf0_1280.jpg">
@@ -371,7 +411,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3 data-key="contact-email-title">Email</h3>
-                            <p>info@greengear.th</p>
+                            <p>hello@onlygod.com</p>
                         </div>
                     </div>
                     
@@ -427,6 +467,50 @@
             </div>
         </div>
     </footer>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "onlygod",
+        "description": "Premium cannabis accessories store featuring bongs, grinders, rolling papers and smoking gear",
+        "url": "https://onlygod.com",
+        "telephone": "+66-2-123-4567",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Cannabis Street",
+            "addressLocality": "Bangkok",
+            "addressCountry": "Thailand",
+            "postalCode": "10110"
+        },
+        "openingHours": "Mo-Su 10:00-22:00",
+        "sameAs": [
+            "https://line.me/R/ti/p/@onlygod"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Cannabis Accessories",
+            "itemListElement": [
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Bongs & Water Pipes",
+                    "description": "Premium glass bongs and water pipes"
+                },
+                {
+                    "@type": "OfferCatalog", 
+                    "name": "Grinders",
+                    "description": "Metal and electric grinders for cannabis preparation"
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Rolling Papers",
+                    "description": "Premium rolling papers and accessories"
+                }
+            ]
+        }
+    }
+    </script>
 
     <!-- Zoom Modal -->
     <div class="zoom-modal" id="zoom-modal">
